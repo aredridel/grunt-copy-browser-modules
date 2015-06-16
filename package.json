@@ -4,7 +4,8 @@
   "description": "Copy browser modules into a flat tree for use",
   "main": "tasks/index.js",
   "scripts": {
-    "test": "tap test.js"
+    "test": "nyc tap test.js && nyc report",
+    "report": "nyc report --reporter=lcov"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-force-task": "^1.0.0",
+    "nyc": "^2.3.0",
     "rimraf": "^2.4.0",
     "tap": "^1.2.0"
   },
