@@ -1,6 +1,6 @@
 {
   "name": "grunt-copy-browser-modules",
-  "version": "1.0.0",
+  "version": "1.0.0-0",
   "description": "Copy browser modules into a flat tree for use",
   "main": "tasks/index.js",
   "scripts": {
