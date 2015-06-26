@@ -18,6 +18,7 @@
 
 'use strict';
 var copyTo = require('copy-browser-modules');
+var util = require('util');
 
 module.exports = function (grunt) {
     grunt.registerTask('copy-browser-modules', 'Copy browser modules into a flat tree', function () {
@@ -28,6 +29,8 @@ module.exports = function (grunt) {
             dest: 'public/components/'
         });
 
-        copyTo(options.root, options.dest).then(function () { done(); }).catch(done);
+        copyTo(options.root, options.dest, function (f) {
+            grunt.log.writeln(util.format("Copied '%s'", f.name.green));
+        }).then(function () { done(); }).catch(done);
     });
 };
