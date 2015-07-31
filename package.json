@@ -4,8 +4,8 @@
   "description": "Copy browser modules into a flat tree for use",
   "main": "tasks/index.js",
   "scripts": {
-    "test": "nyc tap test.js && nyc report",
-    "report": "nyc report --reporter=lcov"
+    "report": "nyc report --reporter=lcov",
+    "test": "nyc tap test.js && nyc report"
   },
   "repository": {
     "type": "git",

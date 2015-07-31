@@ -13,9 +13,11 @@ test('Grunt-localizr', function (t) {
     t.test('test a localizr build', function(t) {
         grunt.initConfig({
             "copy-browser-modules": {
-                options: {
-                    root: path.resolve(__dirname, "test-fixtures/trivial"),
-                    dest: path.resolve(__dirname, "tmp/components")
+                target: {
+                    options: {
+                        root: path.resolve(__dirname, "test-fixtures/trivial"),
+                        dest: path.resolve(__dirname, "tmp/components")
+                    }
                 }
             }
         });
