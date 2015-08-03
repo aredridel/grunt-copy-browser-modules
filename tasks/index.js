@@ -7,7 +7,7 @@ module.exports = function dustjs(grunt) {
         var options = this.options({
             root: process.cwd(),
             dest: 'public/components/'
-        });
+        }, this.data);
 
         var done = this.async();
 
