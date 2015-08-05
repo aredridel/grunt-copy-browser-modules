@@ -29,6 +29,6 @@
     "tap": "^1.2.0"
   },
   "dependencies": {
-    "copy-browser-modules": "^2.0.0"
+    "copy-browser-modules": "^3.0.0"
   }
 }
