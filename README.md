@@ -24,7 +24,7 @@ module.exports = function copyto(grunt) {
             options: {
                 root: path.resolve(__dirname, '..'),
                 dest: path.resolve(__dirname, '..', 'public', 'components'),
-                docRoot: path.resolve(__dirname, '..', 'public')
+                basePath: path.resolve(__dirname, '..', 'public')
             }
         }
     };
