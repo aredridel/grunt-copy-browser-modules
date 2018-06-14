@@ -6,11 +6,13 @@ var path = require('path');
 var fs = require('fs');
 
 grunt.loadNpmTasks('grunt-force-task');
-test('Grunt-localizr', function (t) {
+test('grunt-copy-browser-modules', function (t) {
     grunt.task.init = function() {};
     require('./tasks')(grunt);
 
-    t.test('test a localizr build', function(t) {
+    t.plan(1)
+
+    t.test('test copying', function(t) {
         grunt.initConfig({
             "copy-browser-modules": {
                 target: {
@@ -23,6 +25,7 @@ test('Grunt-localizr', function (t) {
         });
 
         grunt.tasks(['copy-browser-modules'], {}, function(){
+
             //verify the files exist
             t.ok(fs.existsSync(path.resolve("tmp/components/component1/component1.js")));
             t.ok(fs.existsSync(path.resolve("tmp/components/component1/package.json")));
